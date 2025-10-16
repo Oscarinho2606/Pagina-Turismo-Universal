@@ -1,0 +1,313 @@
+/* === STYLE: Moderno, limpio, blanco + naranja + azul + verde (no fosforescentes) === */
+
+/* Paleta */
+:root{
+  --white: #FFFFFF;
+  --text: #213547;        /* texto oscuro suave */
+  --muted: #6B7A86;       /* textos secundarios */
+  --accent-orange: #FF8A4B;
+  --primary-blue: #2F80ED;
+  --success-green: #27AE60;
+  --card-bg: #FAFBFC;
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--card-bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* NAVBAR */
+nav{
+  background: var(--white);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 28px;
+  box-shadow: 0 6px 18px rgba(33,53,71,0.06);
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+
+nav .brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+  color:var(--text);
+}
+
+.brand-logo{
+  width:44px;
+  height:44px;
+  border-radius:8px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--accent-orange));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--white);
+  font-weight:700;
+  box-shadow: 0 6px 18px rgba(47,128,237,0.12);
+}
+
+nav .links{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+
+nav a{
+  color:var(--text);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+  font-weight:600;
+  transition: all .18s ease;
+}
+
+nav a:hover{
+  background: rgba(47,128,237,0.06);
+  color: var(--primary-blue);
+}
+
+/* CTA buttons on nav */
+.btn-ghost{
+  background: transparent;
+  border:1px solid rgba(33,53,71,0.06);
+  padding:8px 14px;
+  border-radius:10px;
+  color:var(--text);
+}
+
+.btn-primary{
+  background: var(--primary-blue);
+  color: white;
+  padding:8px 14px;
+  border-radius:10px;
+  border:none;
+  box-shadow: 0 8px 20px rgba(47,128,237,0.12);
+}
+
+/* HERO / BANNER */
+.banner{
+  display:grid;
+  grid-template-columns: 1fr 480px;
+  gap:40px;
+  align-items:center;
+  padding:64px 6%;
+  max-width:1200px;
+  margin: 30px auto;
+}
+
+.banner-left{
+  max-width:700px;
+  padding-right:10px;
+  animation: fadeInUp .8s ease both;
+}
+
+.h1{
+  font-size:2.6rem;
+  margin:0 0 12px 0;
+  color:var(--text);
+  letter-spacing:-0.5px;
+}
+
+.lead{
+  color:var(--muted);
+  font-size:1.05rem;
+  margin-bottom:18px;
+}
+
+/* CTA group */
+.cta-row{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.cta-row .btn{
+  cursor:pointer;
+  border:none;
+  font-weight:700;
+  border-radius:12px;
+  padding:12px 18px;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.cta-orange{ background: linear-gradient(90deg,var(--accent-orange), #ff9f6a); color:var(--white); box-shadow: 0 10px 20px rgba(255,138,75,0.12); }
+.cta-blue{ background: var(--primary-blue); color:var(--white); box-shadow: 0 10px 20px rgba(47,128,237,0.12); }
+.cta-green{ background: var(--success-green); color:var(--white); box-shadow: 0 10px 20px rgba(39,174,96,0.12); }
+
+.cta-row .btn:hover{ transform: translateY(-4px); }
+
+/* Banner right (card con imagen) */
+.banner-right{
+  background: var(--white);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow: 0 10px 30px rgba(33,53,71,0.06);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:320px;
+  padding:18px;
+}
+
+.banner-right img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+}
+
+/* SECCIONES */
+.section{
+  max-width:1200px;
+  margin: 30px auto;
+  padding: 20px 6%;
+  animation: fadeInUp .7s ease both;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap:18px;
+  margin-top:20px;
+}
+
+.card{
+  background: var(--white);
+  color: var(--text);
+  padding:18px;
+  border-radius:12px;
+  box-shadow: 0 8px 18px rgba(33,53,71,0.04);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.card h3{ margin-top:6px; margin-bottom:8px; }
+.card p{ color:var(--muted); margin:0; }
+
+.card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(33,53,71,0.08);
+}
+
+/* CONTACT / WHATSAPP BUTTON fixed bottom-right */
+.whatsapp-fixed{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background: linear-gradient(90deg,var(--success-green), #2ecc71);
+  color:var(--white);
+  border-radius:999px;
+  padding:12px 18px;
+  box-shadow: 0 10px 30px rgba(39,174,96,0.18);
+  display:flex;
+  gap:10px;
+  align-items:center;
+  z-index:40;
+  text-decoration:none;
+  font-weight:700;
+}
+
+/* FOOTER */
+footer{
+  margin-top:40px;
+  background:transparent;
+  padding:30px 6%;
+  text-align:center;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  .banner{ grid-template-columns: 1fr; padding:36px 6%; gap:20px; }
+  .banner-right img{ height:180px; }
+  nav{ padding:10px 16px; }
+  .h1{ font-size:2rem; }
+}
+
+/* Small animations */
+@keyframes fadeInUp{
+  from { opacity:0; transform: translateY(16px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+/* Utility */
+.text-muted{ color:var(--muted); font-size:0.95rem; }
+.small{ font-size:0.9rem; color:var(--muted); }
+/* === FORMULARIO DE CONTACTO === */
+.contacto-section{
+  max-width:600px;
+  margin:auto;
+  background: var(--white);
+  padding: 30px 24px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(33,53,71,0.06);
+  animation: fadeInUp .7s ease both;
+}
+
+.contacto-section h2{
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.contacto-section .lead{
+  text-align:center;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  font-weight:600;
+  margin-bottom:6px;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea{
+  padding: 12px;
+  border: 1px solid rgba(33,53,71,0.12);
+  border-radius: 10px;
+  font-size: 1rem;
+  background: var(--card-bg);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(47,128,237,0.12);
+}
+
+.contact-form button{
+  margin-top:10px;
+  font-size:1rem;
+  cursor:pointer;
+}
+
+
+
