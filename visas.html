@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Visa Americana | Turismo Universal Representaciones</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 
   <nav>
-    <a href="/" class="brand">
+    <a href="index.html" class="brand">
       <div class="brand-logo">TU</div>
       <span>Turismo Universal Representaciones</span>
     </a>
     <div class="links">
-      <a href="/">Inicio</a>
-      <a href="/viajes">Viajes</a>
-      <a href="/visas">Visas</a>
-      <a href="/contactenos">Contáctenos</a>
+      <a href="index.html">Inicio</a>
+      <a href="viajes.html">Viajes</a>
+      <a href="visas.html">Visas</a>
+      <a href="contactenos.html">Contáctenos</a>
     </div>
   </nav>
 
@@ -28,8 +28,8 @@
         Te acompañamos en todo el proceso: solicitud, preparación de documentos, agendamiento y asesoría personalizada.
       </p>
       <div class="cta-row">
-        <button class="btn cta-blue">Agendar Asesoría</button>
-        <button class="btn cta-green">Más Información</button>
+        <button class="btn cta-blue" onclick="window.location.href='contactenos.html'">Agendar Asesoría</button>
+        <button class="btn cta-green" onclick="window.open('https://wa.me/573017653449?text=Hola%20quiero%20información%20para%20mi%20visa%20🇺🇸','_blank')">Más Información</button>
       </div>
     </div>
     <div class="banner-right">

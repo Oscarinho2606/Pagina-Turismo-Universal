@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turismo Universal Representaciones</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 
   <!-- Barra de navegación -->
   <nav>
-    <a href="/" class="brand">
+    <a href="index.html" class="brand">
       <div class="brand-logo">TU</div>
       <span>Turismo Universal Representaciones</span>
     </a>
     <div class="links">
-      <a href="/">Inicio</a>
-      <a href="/viajes">Viajes</a>
-      <a href="/visas">Visas</a>
-      <a href="/contactenos">Contáctenos</a>
+      <a href="index.html">Inicio</a>
+      <a href="viajes.html">Viajes</a>
+      <a href="visas.html">Visas</a>
+      <a href="contactenos.html">Contáctenos</a>
     </div>
   </nav>
 
@@ -31,8 +31,8 @@
         Disfruta experiencias inolvidables mientras nosotros nos encargamos de todo.
       </p>
       <div class="cta-row">
-        <button class="btn cta-orange" onclick="window.location.href='/viajes'">Explorar Viajes</button>
-        <button class="btn cta-blue" onclick="window.location.href='/visas'">Solicitar Visa</button>
+        <button class="btn cta-orange" onclick="window.location.href='viajes.html'">Explorar Viajes</button>
+        <button class="btn cta-blue" onclick="window.location.href='visas.html'">Solicitar Visa</button>
       </div>
     </div>
 
@@ -72,7 +72,7 @@
       <button class="btn cta-green" onclick="window.open('https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️','_blank')">
         WhatsApp
       </button>
-      <button class="btn cta-blue" onclick="window.location.href='/contactenos'">
+      <button class="btn cta-blue" onclick="window.location.href='contactenos.html'">
         Formulario de contáctenos
       </button>
     </div>
