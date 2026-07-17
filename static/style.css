@@ -71,11 +71,11 @@ ul { list-style: none; }
 }
 
 #navbar.scrolled {
-  background: rgba(255,255,255,0.96);
+  background: rgba(10,22,40,0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   padding: 14px 6%;
-  box-shadow: 0 4px 24px rgba(10,22,40,0.09);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.35);
 }
 
 /* Brand */
@@ -98,7 +98,7 @@ ul { list-style: none; }
   color: white;
   transition: var(--t);
 }
-#navbar.scrolled .brand-name { color: var(--navy); }
+#navbar.scrolled .brand-name { color: white; }
 
 .brand-tagline {
   font-size: 0.68rem;
@@ -106,7 +106,7 @@ ul { list-style: none; }
   font-weight: 400;
   transition: var(--t);
 }
-#navbar.scrolled .brand-tagline { color: var(--muted); }
+#navbar.scrolled .brand-tagline { color: rgba(255,255,255,0.55); }
 
 /* Links */
 .nav-links { display: flex; align-items: center; gap: 6px; }
@@ -122,10 +122,10 @@ ul { list-style: none; }
   background: rgba(255,255,255,0.14);
   color: white;
 }
-#navbar.scrolled .nav-links a { color: var(--text); }
+#navbar.scrolled .nav-links a { color: rgba(255,255,255,0.85); }
 #navbar.scrolled .nav-links a:hover {
-  background: rgba(37,99,235,0.07);
-  color: var(--blue);
+  background: rgba(255,255,255,0.1);
+  color: white;
 }
 
 .nav-cta {
@@ -1347,12 +1347,12 @@ ul { list-style: none; }
   text-decoration-color: rgba(255,255,255,0.6);
 }
 #navbar.scrolled .nav-links a.nav-active {
-  background: rgba(37,99,235,0.09) !important;
-  color: var(--blue) !important;
+  background: rgba(255,255,255,0.12) !important;
+  color: white !important;
   font-weight: 700 !important;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: var(--blue);
+  text-decoration-color: rgba(255,255,255,0.6);
 }
 /* When active page IS visas, combine both styles */
 .nav-links a.nav-visa-link.nav-active {
