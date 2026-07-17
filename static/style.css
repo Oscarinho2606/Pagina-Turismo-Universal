@@ -1071,6 +1071,10 @@ ul { list-style: none; }
   .form-row { grid-template-columns: 1fr; }
   .form-card { padding: 32px 22px; }
   .cta-banner-bg { background-attachment: scroll; }
+  .hero-search { flex-direction: column; padding: 12px; gap: 6px; }
+  .hs-divider { width: 100%; height: 1px; }
+  .hs-field { padding: 8px 10px; }
+  .hs-btn { width: 100%; text-align: center; padding: 14px; border-radius: 10px; }
 }
 
 @media (max-width: 480px) {
@@ -1363,6 +1367,103 @@ ul { list-style: none; }
   text-underline-offset: 3px;
   text-decoration-color: var(--gold);
 }
+
+/* ============================================================
+   HERO SEARCH BAR
+   ============================================================ */
+.hero-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.11);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 18px;
+  padding: 8px;
+  margin-top: 36px;
+  max-width: 780px;
+}
+.hs-field {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+}
+.hs-icon { font-size: 1.15rem; flex-shrink: 0; }
+.hs-field label {
+  display: block;
+  font-size: 0.63rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 3px;
+}
+.hs-field input,
+.hs-field select {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 0.88rem;
+  font-weight: 500;
+  font-family: inherit;
+  width: 100%;
+}
+.hs-field input::placeholder { color: rgba(255,255,255,0.42); }
+.hs-field select option { color: var(--navy); background: white; }
+.hs-divider {
+  width: 1px; height: 42px;
+  background: rgba(255,255,255,0.18);
+  flex-shrink: 0;
+}
+.hs-btn {
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 26px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--t);
+  flex-shrink: 0;
+}
+.hs-btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
+
+/* ============================================================
+   DESTINATION FILTERS
+   ============================================================ */
+.dest-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 44px;
+}
+.filter-btn {
+  padding: 9px 22px;
+  border-radius: 50px;
+  border: 2px solid var(--border);
+  background: white;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--t);
+}
+.filter-btn:hover { border-color: var(--blue); color: var(--blue); }
+.filter-btn.active {
+  background: var(--navy);
+  color: white;
+  border-color: var(--navy);
+  box-shadow: 0 4px 16px rgba(10,22,40,0.18);
+}
+.dest-card.hidden { display: none; }
 
 /* ============================================================
    RESPONSIVE ADDITIONS

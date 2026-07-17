@@ -57,9 +57,19 @@
         <p class="section-desc reveal">Cada paquete incluye asesoría personalizada. Escríbenos por WhatsApp y te cotizamos en minutos.</p>
       </div>
 
+      <!-- FILTROS -->
+      <div class="dest-filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="europa">Europa</button>
+        <button class="filter-btn" data-filter="america">América</button>
+        <button class="filter-btn" data-filter="caribe">Caribe</button>
+        <button class="filter-btn" data-filter="colombia">Colombia</button>
+        <button class="filter-btn" data-filter="medio-oriente">Medio Oriente</button>
+      </div>
+
       <div class="destinations-grid">
 
-        <div class="dest-card reveal d1">
+        <div class="dest-card reveal d1" data-region="europa">
           <div class="dest-img">
             <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="París" loading="lazy">
             <span class="dest-badge">🇫🇷 Europa</span>
@@ -79,7 +89,7 @@
           </div>
         </div>
 
-        <div class="dest-card reveal d2">
+        <div class="dest-card reveal d2" data-region="colombia">
           <div class="dest-img">
             <img src="https://images.unsplash.com/photo-1569388330292-79cc1ec67270?auto=format&fit=crop&w=800&q=80" alt="Cartagena" loading="lazy">
             <span class="dest-badge">🇨🇴 Colombia</span>
@@ -99,7 +109,7 @@
           </div>
         </div>
 
-        <div class="dest-card reveal d3">
+        <div class="dest-card reveal d3" data-region="medio-oriente">
           <div class="dest-img">
             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai" loading="lazy">
             <span class="dest-badge">🇦🇪 Medio Oriente</span>
@@ -119,7 +129,7 @@
           </div>
         </div>
 
-        <div class="dest-card reveal d1">
+        <div class="dest-card reveal d1" data-region="america">
           <div class="dest-img">
             <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80" alt="Orlando" loading="lazy">
             <span class="dest-badge">🇺🇸 Estados Unidos</span>
@@ -139,7 +149,7 @@
           </div>
         </div>
 
-        <div class="dest-card reveal d2">
+        <div class="dest-card reveal d2" data-region="caribe">
           <div class="dest-img">
             <img src="https://images.unsplash.com/photo-1552074284-5e88ef1aef18?auto=format&fit=crop&w=800&q=80" alt="Cancún" loading="lazy">
             <span class="dest-badge">🇲🇽 México</span>
@@ -159,7 +169,7 @@
           </div>
         </div>
 
-        <div class="dest-card reveal d3">
+        <div class="dest-card reveal d3" data-region="europa">
           <div class="dest-img">
             <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" alt="Roma" loading="lazy">
             <span class="dest-badge">🇮🇹 Europa</span>
@@ -269,6 +279,22 @@
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
     const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: 0.12 });
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => io.observe(el));
+
+    // Filtro de destinos
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.dest-card').forEach(card => {
+          if (filter === 'todos' || card.dataset.region === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>

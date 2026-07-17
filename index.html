@@ -66,6 +66,40 @@
           💬 Contáctanos
         </a>
       </div>
+
+      <!-- BUSCADOR RÁPIDO -->
+      <div class="hero-search">
+        <div class="hs-field">
+          <span class="hs-icon">📍</span>
+          <div>
+            <label>¿A dónde quieres ir?</label>
+            <input type="text" id="hs-destino" placeholder="París, Cancún, Dubai…">
+          </div>
+        </div>
+        <div class="hs-divider"></div>
+        <div class="hs-field">
+          <span class="hs-icon">📅</span>
+          <div>
+            <label>¿Cuándo viajas?</label>
+            <input type="month" id="hs-fecha">
+          </div>
+        </div>
+        <div class="hs-divider"></div>
+        <div class="hs-field">
+          <span class="hs-icon">👥</span>
+          <div>
+            <label>Viajeros</label>
+            <select id="hs-personas">
+              <option value="1 persona">1 persona</option>
+              <option value="2 personas" selected>2 personas</option>
+              <option value="3 personas">3 personas</option>
+              <option value="4 personas">4 personas</option>
+              <option value="5 o más personas">5 o más</option>
+            </select>
+          </div>
+        </div>
+        <button class="hs-btn" onclick="cotizarHero()">Cotizar ✈️</button>
+      </div>
     </div>
 
     <div class="hero-scroll">
@@ -340,6 +374,66 @@
   </section>
 
   <!-- ================================================
+       FAQ GENERAL
+       ================================================ -->
+  <section class="section-wrap bg-white">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Preguntas frecuentes</div>
+        <h2 class="section-title reveal">¿Tienes dudas?<br><span class="accent">Las resolvemos aquí</span></h2>
+        <p class="section-desc reveal">Lo que más nos preguntan nuestros viajeros, respondido de forma clara.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal d1">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span class="faq-q">¿Con cuánto tiempo de anticipación debo planear mi viaje?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Lo ideal es planear con 4 a 8 semanas de anticipación para conseguir los mejores precios en vuelos y hoteles. Sin embargo, también manejamos salidas con poco tiempo cuando hay disponibilidad. ¡Consúltanos sin importar cuándo quieres viajar!</p>
+          </div>
+        </div>
+        <div class="faq-item reveal d2">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span class="faq-q">¿Los paquetes incluyen tiquetes aéreos?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, nuestros paquetes pueden incluir tiquetes aéreos, hotel, traslados y actividades, todo en una sola cotización. También podemos armar paquetes solo de hotel o solo de actividades según lo que necesites.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal d3">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span class="faq-q">¿Puedo personalizar mi paquete de viaje?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolutamente. Todos nuestros paquetes son 100% personalizables. Ajustamos fechas, número de noches, tipo de hotel, actividades y presupuesto. Tu viaje se arma a tu medida, no al revés.</p>
+          </div>
+        </div>
+        <div class="faq-item reveal d4">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span class="faq-q">¿Necesito visa para viajar a Europa o Estados Unidos?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Depende de tu destino y tu pasaporte. Para muchos colombianos, destinos como Europa y Estados Unidos requieren visa. Nosotros no solo organizamos tu viaje, sino que también te ayudamos con el trámite de visa americana. ¡Pregúntanos por el proceso!</p>
+          </div>
+        </div>
+        <div class="faq-item reveal d1">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            <span class="faq-q">¿Tienen opciones para grupos o viajes de empresa?</span>
+            <span class="faq-ico">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí, manejamos viajes grupales para familias, amigos, equipos de trabajo y convenciones empresariales. Los grupos tienen tarifas especiales y atención prioritaria. Escríbenos con el número de personas y el destino que tienes en mente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
        WHATSAPP FAB
        ================================================ -->
   <a class="whatsapp-fab" href="https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️" target="_blank" aria-label="Contactar por WhatsApp">
@@ -449,6 +543,24 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
     revealEls.forEach(el => io.observe(el));
+
+    // Hero search → WhatsApp
+    function cotizarHero() {
+      const destino  = document.getElementById('hs-destino').value.trim() || 'un destino';
+      const fecha    = document.getElementById('hs-fecha').value;
+      const personas = document.getElementById('hs-personas').value;
+      let msg = `Hola! Quiero cotizar un viaje ✈️\n\n📍 Destino: ${destino}\n👥 Viajeros: ${personas}`;
+      if (fecha) { const [y,m] = fecha.split('-'); const meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']; msg += `\n📅 Fecha: ${meses[parseInt(m,10)-1]} ${y}`; }
+      window.open('https://wa.me/573017653449?text=' + encodeURIComponent(msg), '_blank');
+    }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
   </script>
 </body>
 </html>
