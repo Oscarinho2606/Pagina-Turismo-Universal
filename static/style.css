@@ -156,7 +156,7 @@ ul { list-style: none; }
   background: white; border-radius: 2px;
   transition: var(--t);
 }
-#navbar.scrolled .nav-toggle span { background: var(--navy); }
+#navbar.scrolled .nav-toggle span { background: white; }
 
 /* ============================================================
    HERO — FULL SCREEN
