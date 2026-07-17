@@ -1322,15 +1322,13 @@ ul { list-style: none; }
   font-size: 1.05rem; line-height: 1.76; margin-bottom: 44px;
 }
 
-/* Navbar visa highlight */
+/* Navbar visa highlight — solo color sutil, sin recuadro */
 .nav-visa-link {
-  background: rgba(245,158,11,0.12) !important;
   color: var(--gold) !important;
-  border: 1px solid rgba(245,158,11,0.25) !important;
-  border-radius: 8px !important;
+  font-weight: 600 !important;
 }
 .nav-visa-link:hover {
-  background: rgba(245,158,11,0.22) !important;
+  background: rgba(245,158,11,0.12) !important;
   color: var(--gold) !important;
 }
 #navbar.scrolled .nav-visa-link { color: var(--gold-dark) !important; }
