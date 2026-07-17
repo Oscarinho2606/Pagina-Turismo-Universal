@@ -432,6 +432,8 @@
   <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 80), { passive: true });
+    // Active nav link
+    (function(){ const p = location.pathname.split('/').pop() || 'index.html'; document.querySelectorAll('.nav-links a').forEach(function(a){ const h = (a.getAttribute('href')||'').split('/').pop(); if(h===p) a.classList.add('nav-active'); }); })();
     const toggle = document.getElementById('navToggle');
     const links  = document.getElementById('navLinks');
     toggle.addEventListener('click', () => links.classList.toggle('open'));

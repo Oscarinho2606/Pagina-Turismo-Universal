@@ -431,6 +431,9 @@
       navbar.classList.toggle('scrolled', window.scrollY > 80);
     }, { passive: true });
 
+    // Active nav link
+    (function(){ const p = location.pathname.split('/').pop() || 'index.html'; document.querySelectorAll('.nav-links a').forEach(function(a){ const h = (a.getAttribute('href')||'').split('/').pop(); if(h===p) a.classList.add('nav-active'); }); })();
+
     // Mobile menu
     const toggle = document.getElementById('navToggle');
     const links  = document.getElementById('navLinks');

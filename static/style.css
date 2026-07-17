@@ -1335,6 +1335,33 @@ ul { list-style: none; }
 }
 #navbar.scrolled .nav-visa-link { color: var(--gold-dark) !important; }
 
+/* Active page indicator */
+.nav-links a.nav-active {
+  background: rgba(255,255,255,0.18) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,0.6);
+}
+#navbar.scrolled .nav-links a.nav-active {
+  background: rgba(37,99,235,0.09) !important;
+  color: var(--blue) !important;
+  font-weight: 700 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--blue);
+}
+/* When active page IS visas, combine both styles */
+.nav-links a.nav-visa-link.nav-active {
+  background: rgba(245,158,11,0.22) !important;
+  border-color: rgba(245,158,11,0.5) !important;
+  font-weight: 700 !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--gold);
+}
+
 /* ============================================================
    RESPONSIVE ADDITIONS
    ============================================================ */
