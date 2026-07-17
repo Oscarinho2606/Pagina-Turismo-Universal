@@ -1,97 +1,451 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Turismo Universal Representaciones</title>
+  <meta name="description" content="Turismo Universal Representaciones — Agencia de viajes premium. Viaja al destino de tus sueños con asesoría personalizada, paquetes exclusivos y trámite de visas.">
+  <title>Turismo Universal Representaciones | Viaja al mundo con confianza</title>
   <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
 
-  <!-- Barra de navegación -->
-  <nav>
-    <a href="index.html" class="brand">
-      <div class="brand-logo">TU</div>
-      <span>Turismo Universal Representaciones</span>
+  <!-- ================================================
+       NAVBAR
+       ================================================ -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">TU</div>
+      <div class="nav-brand-text">
+        <span class="brand-name">Turismo Universal</span>
+        <span class="brand-tagline">Representaciones</span>
+      </div>
     </a>
-    <div class="links">
+
+    <div class="nav-links" id="navLinks">
       <a href="index.html">Inicio</a>
-      <a href="viajes.html">Viajes</a>
-      <a href="visas.html">Visas</a>
-      <a href="contactenos.html">Contáctenos</a>
+      <a href="pages/viajes.html">Destinos</a>
+      <a href="pages/visas.html" class="nav-visa-link">🇺🇸 Visas</a>
+      <a href="pages/contactenos.html">Contáctenos</a>
+      <a href="https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️"
+         target="_blank" class="nav-cta">Cotizar ahora</a>
+    </div>
+
+    <div class="nav-toggle" id="navToggle" aria-label="Menú">
+      <span></span><span></span><span></span>
     </div>
   </nav>
 
-  <!-- Banner principal -->
-  <header class="banner">
-    <div class="banner-left">
-      <h1 class="h1">Viaja por el mundo con confianza 🌍</h1>
-      <p class="lead">
-        En <strong>Turismo Universal Representaciones</strong> organizamos viajes a cualquier destino. 
-        Disfruta experiencias inolvidables mientras nosotros nos encargamos de todo.
+  <!-- ================================================
+       HERO — PANTALLA COMPLETA
+       ================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Agencia de viajes de confianza • Más de 10 años de experiencia
+      </div>
+
+      <h1 class="hero-title">
+        El mundo entero<br>
+        te está <span class="accent">esperando</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Organizamos el viaje de tus sueños a cualquier destino del planeta.
+        Tú disfruta cada momento, nosotros nos encargamos de todo.
       </p>
-      <div class="cta-row">
-        <button class="btn cta-orange" onclick="window.location.href='viajes.html'">Explorar Viajes</button>
-        <button class="btn cta-blue" onclick="window.location.href='visas.html'">Solicitar Visa</button>
+
+      <div class="hero-buttons">
+        <a href="pages/viajes.html" class="btn-primary">
+          ✈️ Descubre tu próximo destino
+        </a>
+        <a href="pages/contactenos.html" class="btn-secondary">
+          💬 Contáctanos
+        </a>
       </div>
     </div>
 
-    <div class="banner-right">
-      <img src="https://images.unsplash.com/photo-1541417904950-b855846fe074" alt="Viajes">
+    <div class="hero-scroll">
+      <div class="scroll-mouse"></div>
+      <span>Explorar</span>
     </div>
-  </header>
+  </section>
 
-  <!-- Sección de servicios -->
-  <section class="section">
-    <h2>🌟 Nuestros Servicios</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Asesoría personalizada</h3>
-        <p>Te guiamos en cada paso para elegir el plan perfecto.</p>
+  <!-- ================================================
+       STATS STRIP
+       ================================================ -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item reveal d1">
+        <div class="stat-number">+10</div>
+        <div class="stat-label">Años de experiencia</div>
       </div>
-      <div class="card">
-        <h3>Trámite de visas</h3>
-        <p>Te ayudamos con solicitud o renovación de visa americana 🇺🇸.</p>
+      <div class="stat-item stat-divider reveal d2">
+        <div class="stat-number">+500</div>
+        <div class="stat-label">Clientes felices</div>
       </div>
-      <div class="card">
-        <h3>Planes a cualquier destino</h3>
-        <p>Europa, Asia, América y más… ¡tu próximo viaje te espera!</p>
+      <div class="stat-item stat-divider reveal d3">
+        <div class="stat-number">+80</div>
+        <div class="stat-label">Destinos disponibles</div>
       </div>
-      <div class="card">
-        <h3>Atención confiable</h3>
-        <p>Más de 10 años cumpliendo sueños de viaje.</p>
+      <div class="stat-item stat-divider reveal d4">
+        <div class="stat-number">4.9★</div>
+        <div class="stat-label">Calificación promedio</div>
       </div>
     </div>
   </section>
 
-  <!-- Sección de contacto -->
-  <section class="section contactenos-home">
-    <h2>📞 Contáctanos</h2>
-    <p>¿Tienes dudas o quieres una cotización personalizada? Escríbenos y te responderemos rápido 😉</p>
-    <div class="cta-row">
-      <button class="btn cta-green" onclick="window.open('https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️','_blank')">
-        WhatsApp
-      </button>
-      <button class="btn cta-blue" onclick="window.location.href='contactenos.html'">
-        Formulario de contáctenos
-      </button>
+  <!-- ================================================
+       SERVICIOS
+       ================================================ -->
+  <section class="section-wrap bg-white">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Nuestros servicios</div>
+        <h2 class="section-title reveal">Todo lo que necesitas<br><span class="accent">en un solo lugar</span></h2>
+        <p class="section-desc reveal">Desde la primera consulta hasta el regreso a casa, estamos contigo en cada paso de tu aventura.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card reveal d1">
+          <div class="service-icon">🧭</div>
+          <h3>Asesoría Personalizada</h3>
+          <p>Te escuchamos y diseñamos el plan de viaje perfecto según tus deseos, fechas y presupuesto.</p>
+        </div>
+        <div class="service-card reveal d2">
+          <div class="service-icon">📋</div>
+          <h3>Trámite de Visas</h3>
+          <p>Te acompañamos en todo el proceso de solicitud o renovación de visa americana y más.</p>
+        </div>
+        <div class="service-card reveal d3">
+          <div class="service-icon">🌍</div>
+          <h3>Destinos Mundiales</h3>
+          <p>Europa, Asia, América, el Caribe y más. Tenemos paquetes a cualquier rincón del planeta.</p>
+        </div>
+        <div class="service-card reveal d4">
+          <div class="service-icon">⭐</div>
+          <h3>Atención Confiable</h3>
+          <p>Más de una década haciendo realidad los sueños de viaje de cientos de familias colombianas.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a class="whatsapp-fixed" href="https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️" target="_blank">
-    💬 Contáctanos
+  <!-- ================================================
+       VISA AMERICANA — SECCIÓN ESTRELLA
+       ================================================ -->
+  <section class="visa-promo-section">
+    <div class="visa-promo-grid">
+
+      <!-- Texto izquierda -->
+      <div class="reveal-left">
+        <div class="visa-star-pill">⭐ Nuestro servicio estrella</div>
+        <h2 class="visa-promo-title">
+          Tu visa americana,<br>
+          más cerca de lo que<br>
+          <span class="gold">crees</span>
+        </h2>
+        <p class="visa-promo-desc">
+          Miles de colombianos sueñan con viajar a Estados Unidos y no saben cómo.
+          Nosotros hacemos ese proceso simple, seguro y exitoso.
+          Te acompañamos desde el primer documento hasta el día que estampan tu visa.
+        </p>
+
+        <div class="visa-stats-row">
+          <div class="visa-stat">
+            <div class="visa-stat-num">98%</div>
+            <div class="visa-stat-lbl">Tasa de aprobación</div>
+          </div>
+          <div class="visa-stat">
+            <div class="visa-stat-num">+300</div>
+            <div class="visa-stat-lbl">Visas gestionadas</div>
+          </div>
+          <div class="visa-stat">
+            <div class="visa-stat-num">10+</div>
+            <div class="visa-stat-lbl">Años de experiencia</div>
+          </div>
+        </div>
+
+        <div class="visa-promo-buttons">
+          <a href="https://wa.me/573017653449?text=Hola%20quiero%20información%20sobre%20la%20visa%20americana%20🇺🇸" target="_blank" class="btn-visa-wa">
+            💬 Quiero mi visa americana
+          </a>
+          <a href="pages/visas.html" class="btn-visa-outline">
+            Ver todos los servicios →
+          </a>
+        </div>
+      </div>
+
+      <!-- Imagen derecha -->
+      <div class="reveal-right">
+        <div class="visa-img-wrap">
+          <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=900&q=80" alt="Nueva York, Estados Unidos">
+          <div class="visa-img-overlay"></div>
+          <div class="visa-approval-badge">
+            <span class="visa-approval-pct">98%</span>
+            <span class="visa-approval-lbl">Tasa de aprobación con nosotros</span>
+          </div>
+          <div class="visa-float-card">
+            <div class="vfc-icon">✅</div>
+            <div class="vfc-text">
+              <h5>Proceso 100% guiado</h5>
+              <p>DS-160 · Cita · Entrevista</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================
+       DESTINOS DESTACADOS
+       ================================================ -->
+  <section class="section-wrap">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Destinos destacados</div>
+        <h2 class="section-title reveal">Los lugares que te van a<br><span class="accent">dejar sin palabras</span></h2>
+        <p class="section-desc reveal">Cada destino es una historia única. ¿Cuál quieres vivir tú?</p>
+      </div>
+
+      <div class="destinations-grid">
+
+        <div class="dest-card reveal d1">
+          <div class="dest-img">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="París, Francia" loading="lazy">
+            <span class="dest-badge">🇫🇷 Europa</span>
+          </div>
+          <div class="dest-body">
+            <div class="dest-stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              <span class="rating">5.0 · 48 reseñas</span>
+            </div>
+            <div class="dest-name">París, Francia</div>
+            <p class="dest-desc">Romance, arte y la magia de la Torre Eiffel. La ciudad luz te espera con sus cafés, museos y boulevares eternos.</p>
+            <div class="dest-meta">
+              <div class="dest-meta-item">🗓️ <span>7 noches</span></div>
+              <div class="dest-meta-item">✈️ <span>Vuelo incluido</span></div>
+            </div>
+            <a href="https://wa.me/573017653449?text=Hola%20quiero%20cotizar%20París%20Francia%20✈️" target="_blank" class="btn-dest">💬 Quiero saber más</a>
+          </div>
+        </div>
+
+        <div class="dest-card reveal d2">
+          <div class="dest-img">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai" loading="lazy">
+            <span class="dest-badge">🇦🇪 Medio Oriente</span>
+          </div>
+          <div class="dest-body">
+            <div class="dest-stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              <span class="rating">4.9 · 61 reseñas</span>
+            </div>
+            <div class="dest-name">Dubai, Emiratos Árabes</div>
+            <p class="dest-desc">Lujo sin límites, rascacielos imposibles y aventura en el desierto dorado. Una experiencia que va más allá de lo imaginable.</p>
+            <div class="dest-meta">
+              <div class="dest-meta-item">🗓️ <span>6 noches</span></div>
+              <div class="dest-meta-item">✈️ <span>Vuelo incluido</span></div>
+            </div>
+            <a href="https://wa.me/573017653449?text=Hola%20quiero%20cotizar%20Dubai%20✈️" target="_blank" class="btn-dest">💬 Quiero saber más</a>
+          </div>
+        </div>
+
+        <div class="dest-card reveal d3">
+          <div class="dest-img">
+            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" alt="Roma, Italia" loading="lazy">
+            <span class="dest-badge">🇮🇹 Europa</span>
+          </div>
+          <div class="dest-body">
+            <div class="dest-stars">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              <span class="rating">4.9 · 35 reseñas</span>
+            </div>
+            <div class="dest-name">Roma, Italia</div>
+            <p class="dest-desc">Camina por siglos de historia, saborea la auténtica pasta y descubre por qué dicen que todos los caminos llevan a Roma.</p>
+            <div class="dest-meta">
+              <div class="dest-meta-item">🗓️ <span>6 noches</span></div>
+              <div class="dest-meta-item">✈️ <span>Vuelo incluido</span></div>
+            </div>
+            <a href="https://wa.me/573017653449?text=Hola%20quiero%20cotizar%20Roma%20Italia%20✈️" target="_blank" class="btn-dest">💬 Quiero saber más</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="pages/viajes.html" class="btn-primary">Ver todos los destinos ✈️</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CTA BANNER — PARALLAX
+       ================================================ -->
+  <div class="cta-banner">
+    <div class="cta-banner-bg"></div>
+    <div class="cta-banner-overlay"></div>
+    <div class="cta-banner-content">
+      <h2 class="reveal">¿Listo para vivir la aventura de tu vida?</h2>
+      <p class="reveal">No esperes más. Tu próximo destino ya está esperándote. Cotiza ahora sin costo y sin compromiso.</p>
+      <div class="cta-buttons reveal">
+        <a href="https://wa.me/573017653449?text=Hola%20quiero%20cotizar%20un%20viaje%20✈️" target="_blank" class="btn-gold">
+          💬 Escribir por WhatsApp
+        </a>
+        <a href="pages/viajes.html" class="btn-outline-white">
+          🌍 Ver destinos
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================
+       POR QUÉ ELEGIRNOS
+       ================================================ -->
+  <section class="section-wrap bg-navy">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal" style="background:rgba(245,158,11,0.18);color:var(--gold);">Por qué elegirnos</div>
+        <h2 class="section-title white reveal">Tu tranquilidad es<br><span class="accent-gold">nuestra prioridad</span></h2>
+        <p class="section-desc white reveal">Viaja con la confianza de tener a los mejores a tu lado.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item reveal d1">
+          <span class="feature-icon">🤝</span>
+          <h4>Atención personalizada</h4>
+          <p>Un asesor dedicado exclusivamente a tu viaje, desde la planificación hasta el regreso.</p>
+        </div>
+        <div class="feature-item reveal d2">
+          <span class="feature-icon">💰</span>
+          <h4>Precios competitivos</h4>
+          <p>Las mejores tarifas del mercado con la calidad que mereces. Sin sorpresas, sin costos ocultos.</p>
+        </div>
+        <div class="feature-item reveal d3">
+          <span class="feature-icon">🛡️</span>
+          <h4>Viajes seguros</h4>
+          <p>Más de 10 años de experiencia garantizan que cada detalle esté perfectamente coordinado.</p>
+        </div>
+        <div class="feature-item reveal d4">
+          <span class="feature-icon">📲</span>
+          <h4>Soporte 24/7</h4>
+          <p>Estamos contigo antes, durante y después del viaje. Siempre disponibles por WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       WHATSAPP FAB
+       ================================================ -->
+  <a class="whatsapp-fab" href="https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️" target="_blank" aria-label="Contactar por WhatsApp">
+    <span class="fab-tooltip">¡Escríbenos!</span>
+    💬
   </a>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Turismo Universal Representaciones. Todos los derechos reservados.
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer class="main-footer">
+    <div class="footer-grid">
+
+      <div>
+        <a href="index.html" class="nav-brand" style="margin-bottom:0">
+          <div class="nav-logo">TU</div>
+          <div class="nav-brand-text">
+            <span class="brand-name">Turismo Universal</span>
+            <span class="brand-tagline">Representaciones</span>
+          </div>
+        </a>
+        <p class="footer-brand-desc">
+          Tu agencia de viajes de confianza. Más de 10 años convirtiendo sueños en destinos reales.
+          Planes a cualquier parte del mundo con el mejor servicio.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="https://wa.me/573017653449" target="_blank" class="social-btn" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="pages/viajes.html">Destinos</a></li>
+          <li><a href="pages/visas.html">Visa Americana</a></li>
+          <li><a href="pages/contactenos.html">Contáctenos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Destinos</h4>
+        <ul>
+          <li><a href="pages/viajes.html">París, Francia</a></li>
+          <li><a href="pages/viajes.html">Dubai, EAU</a></li>
+          <li><a href="pages/viajes.html">Cancún, México</a></li>
+          <li><a href="pages/viajes.html">Roma, Italia</a></li>
+          <li><a href="pages/viajes.html">Orlando, USA</a></li>
+          <li><a href="pages/viajes.html">Cartagena</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="footer-contact-line">
+          <span class="fc-icon">📱</span>
+          <span class="fc-text">
+            <a href="tel:+573017653449">+57 301 765 3449</a>
+          </span>
+        </div>
+        <div class="footer-contact-line">
+          <span class="fc-icon">⏰</span>
+          <span class="fc-text">Lunes a Sábado<br>8:00 am – 6:00 pm</span>
+        </div>
+        <div class="footer-contact-line">
+          <span class="fc-icon">📍</span>
+          <span class="fc-text">Colombia</span>
+        </div>
+        <a href="https://wa.me/573017653449?text=Hola%20quiero%20más%20información%20✈️" target="_blank" class="footer-wa">
+          💬 WhatsApp Directo
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2025 Turismo Universal Representaciones. Todos los derechos reservados.</span>
+      <span>Hecho con ❤️ para viajeros</span>
+    </div>
   </footer>
+
+  <!-- ================================================
+       JAVASCRIPT
+       ================================================ -->
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 80);
+    }, { passive: true });
+
+    // Mobile menu
+    const toggle = document.getElementById('navToggle');
+    const links  = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+
+    // Hero zoom on load
+    requestAnimationFrame(() => document.getElementById('hero').classList.add('loaded'));
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  </script>
 </body>
 </html>
-
-
-
-
-
-
