@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctenos - Turismo Universal Representaciones</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <a href="index.html" class="brand">
+      <div class="brand-logo">TU</div>
+      <span>Turismo Universal Representaciones</span>
+    </a>
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="viajes.html">Viajes</a>
+      <a href="visas.html">Visas</a>
+      <a href="contactenos.html" class="active">Contáctenos</a>
+    </div>
+  </nav>
+
+  <!-- Sección de contacto -->
+  <section class="section contacto-section">
+    <h2>📬 Contáctenos</h2>
+    <p class="lead">Déjanos tus datos y uno de nuestros asesores se pondrá en contacto contigo lo antes posible.</p>
+
+    <form class="contact-form" onsubmit="enviarWhatsApp(event)">
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="Ej: juan@email.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono / WhatsApp</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +57 300 123 4567" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte..." rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn cta-green">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Turismo Universal Representaciones. Todos los derechos reservados.
+  </footer>
+
+  <!-- Script para redirigir a WhatsApp -->
+  <script>
+    function enviarWhatsApp(event) {
+      event.preventDefault(); // Evita el envío tradicional del formulario
+
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+      const telefono = document.getElementById('telefono').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      const numero = '573017653449'; // Tu número de WhatsApp con indicativo de país
+      const texto = `¡Hola! Soy ${nombre}. 📩\nCorreo: ${correo}\nTeléfono: ${telefono}\nMensaje: ${mensaje}`;
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank'); // Abre WhatsApp en nueva pestaña
+    }
+  </script>
+</body>
+</html>
+
+
+
